@@ -21,14 +21,14 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
-      - name: Restore dependencies
-        run: dotnet restore
+        - name: Restore dependencies
+        run: dotnet restore src/你的框架项目文件夹/你的项目文件名.csproj
 
-      - name: Build
-        run: dotnet build -c Release --no-restore
+        - name: Build
+        run: dotnet build src/你的框架项目文件夹/你的项目文件名.csproj -c Release --no-restore
 
-      - name: Pack
-        run: dotnet pack -c Release --no-build -o ./artifacts
+        - name: Pack
+        run: dotnet pack src/你的框架项目文件夹/你的项目文件名.csproj -c Release --no-build -o ./artifacts
 
       # 关键：通过 OIDC 获取临时 API Key
       - name: NuGet login via OIDC
