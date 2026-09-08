@@ -3,13 +3,13 @@ name: Publish to NuGet
 on:
   push:
     tags:
-      - 'v*'           # 当你推送 v1.0.0 这样的标签时触发
-  workflow_dispatch:   # 也支持手动触发
+      - 'v*'
+  workflow_dispatch:
 
 jobs:
   publish:
     permissions:
-      id-token: write   # 必须！用于获取 OIDC 令牌
+      id-token: write
       contents: write
     runs-on: ubuntu-latest
 
@@ -21,21 +21,20 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
-        - name: Restore dependencies
+      - name: Restore dependencies
         run: dotnet restore WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI.sln
 
-        - name: Build
+      - name: Build
         run: dotnet build WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI.sln -c Release --no-restore
 
-        - name: Pack
-        run: dotnet pack WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI.sln -c Release --no-build -o ./artifacts
+      - name: Pack
+        run: dotnet pack WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI.csproj -c Release --no-build -o ./artifacts
 
-      # 关键：通过 OIDC 获取临时 API Key
       - name: NuGet login via OIDC
         uses: NuGet/login@v1
         id: login
         with:
-          user: ${{ secrets.NUGET_USER }}   # 你的 nuget.org 用户名，建议存成 Secret
+          user: ${{ secrets.NUGET_USER }}
 
       - name: Push to NuGet
         run: |
