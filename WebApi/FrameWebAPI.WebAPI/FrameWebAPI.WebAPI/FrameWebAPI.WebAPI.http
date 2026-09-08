@@ -1,0 +1,6 @@
+@FrameWebAPI.WebAPI_HostAddress = http://localhost:59038
+
+GET {{FrameWebAPI.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

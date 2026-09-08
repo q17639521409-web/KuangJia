@@ -1,0 +1,402 @@
+{
+  "profile": {
+    "default": {
+      "entityInitFields": [
+        {
+          "defKey": "id",
+          "defName": "ID",
+          "comment": "",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": true,
+          "notNull": true,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "domain": "DefaultString",
+          "id": "4916407A-E387-40BA-8EFE-6EDF07098782",
+          "uiHint": ""
+        },
+        {
+          "defKey": "_corp_id",
+          "defName": "公司ID",
+          "comment": "",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "domain": "DefaultString",
+          "id": "24554859-70F9-49F8-AB70-63D0BEDC5732",
+          "uiHint": ""
+        },
+        {
+          "defKey": "_domain_id",
+          "defName": "域ID",
+          "comment": "",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "",
+          "extProps": {},
+          "domain": "DefaultString",
+          "id": "C576CD92-4229-41A4-8678-FE7018C42C54",
+          "uiHint": ""
+        },
+        {
+          "defKey": "_crt_datetime",
+          "defName": "创建时间",
+          "comment": "",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "IgnoreUpdate",
+          "extProps": {},
+          "domain": "DateTime",
+          "id": "A2EEE556-7A71-49B9-A819-CC784874CEEF",
+          "uiHint": ""
+        },
+        {
+          "defKey": "_crt_prog",
+          "defName": "创建程序",
+          "comment": "",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "IgnoreUpdate",
+          "extProps": {},
+          "domain": "DefaultString",
+          "id": "F91877C6-7AEE-44C7-86B8-1F71F3D0F614",
+          "uiHint": ""
+        },
+        {
+          "defKey": "_crt_user",
+          "defName": "创建人",
+          "comment": "",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "IgnoreUpdate",
+          "extProps": {},
+          "domain": "DefaultString",
+          "id": "69316D14-3D1F-4CE0-9AE4-50F331CB6DD6",
+          "uiHint": ""
+        },
+        {
+          "defKey": "_mod_datetime",
+          "defName": "修改时间",
+          "comment": "",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "IgnoreInsert",
+          "extProps": {},
+          "domain": "DateTime",
+          "id": "1A318611-8988-49E0-A9A5-29BEED209C66",
+          "uiHint": ""
+        },
+        {
+          "defKey": "_mod_prog",
+          "defName": "修改程序",
+          "comment": "",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "IgnoreInsert",
+          "extProps": {},
+          "domain": "DefaultString",
+          "id": "9469A324-3462-47E7-B6E2-24B527F85F84",
+          "uiHint": ""
+        },
+        {
+          "defKey": "_mod_user",
+          "defName": "修改人",
+          "comment": "",
+          "type": "",
+          "len": "",
+          "scale": "",
+          "primaryKey": false,
+          "notNull": false,
+          "autoIncrement": false,
+          "defaultValue": "",
+          "hideInGraph": false,
+          "refDict": "IgnoreInsert",
+          "extProps": {},
+          "domain": "DefaultString",
+          "id": "567862E6-0032-494C-BFF6-5F7CD6CE42A7",
+          "uiHint": ""
+        }
+      ],
+      "entityInitProperties": {
+        "partitioned by": "(date string)",
+        "row format delimited": "",
+        "fields terminated by ','": "",
+        "collection items terminated by '-'": "",
+        "map keys terminated by ':'": "",
+        "store as textfile;": ""
+      }
+    },
+    "sql": {
+      "delimiter": ""
+    },
+    "generatorDoc": {
+      "docTemplate": ""
+    },
+    "relationFieldSize": 50,
+    "uiHint": [
+      {
+        "defKey": "Input",
+        "defName": "普通输入框",
+        "id": "642D2E0A-8846-4549-BE56-8C0473F26EDE"
+      },
+      {
+        "defKey": "Select",
+        "defName": "下拉输入框",
+        "id": "FB111359-2B73-4443-926C-08A98E446448"
+      },
+      {
+        "defKey": "CheckBox",
+        "defName": "复选框",
+        "id": "0CB8A6C9-1115-4FC0-B51E-5C028065082F"
+      },
+      {
+        "defKey": "RadioBox",
+        "defName": "单选框",
+        "id": "5C04987A-260F-4B7C-A5D5-22A181AAE9CA"
+      },
+      {
+        "defKey": "Double",
+        "defName": "小数输入",
+        "id": "8D5BAFE4-E15C-4707-A047-8EE59C58E70F"
+      },
+      {
+        "defKey": "Integer",
+        "defName": "整数输入",
+        "id": "9999AF2A-A44E-415C-A2DC-D7C613BD0073"
+      },
+      {
+        "defKey": "Money",
+        "defName": "金额输入",
+        "id": "2B0C3D0C-7BAF-4B36-81AD-9362B5E5DC2E"
+      },
+      {
+        "defKey": "Date",
+        "defName": "日期输入",
+        "id": "E4D94E14-F695-487F-AFC2-4D888009B7DA"
+      },
+      {
+        "defKey": "DataYearMonth",
+        "defName": "年月输入",
+        "id": "936927E3-DD2D-4096-87FD-074CDE278D59"
+      },
+      {
+        "defKey": "Text",
+        "defName": "长文本输入",
+        "id": "D89DD4F1-ADAC-4469-BF8D-B3FF41AE7963"
+      },
+      {
+        "defKey": "RichText",
+        "defName": "富文本输入",
+        "id": "C134EB1F-4CFF-49E0-882F-2C6FB275CB20"
+      }
+    ],
+    "headers": [
+      {
+        "refKey": "defKey",
+        "hideInGraph": false,
+        "value": "字段代码",
+        "freeze": false
+      },
+      {
+        "refKey": "defName",
+        "hideInGraph": false,
+        "value": "显示名称",
+        "freeze": false
+      },
+      {
+        "refKey": "primaryKey",
+        "hideInGraph": false,
+        "value": "主键",
+        "freeze": false
+      },
+      {
+        "refKey": "notNull",
+        "hideInGraph": true,
+        "value": "不为空",
+        "freeze": false
+      },
+      {
+        "refKey": "autoIncrement",
+        "hideInGraph": true,
+        "value": "自增",
+        "freeze": false
+      },
+      {
+        "refKey": "domain",
+        "hideInGraph": true,
+        "value": "数据域",
+        "freeze": false
+      },
+      {
+        "refKey": "type",
+        "hideInGraph": false,
+        "value": "数据类型",
+        "freeze": false
+      },
+      {
+        "refKey": "defaultValue",
+        "hideInGraph": true,
+        "value": "默认值",
+        "freeze": false
+      },
+      {
+        "refKey": "len",
+        "hideInGraph": false,
+        "value": "长度",
+        "freeze": false
+      },
+      {
+        "refKey": "scale",
+        "hideInGraph": false,
+        "value": "小数位数",
+        "freeze": false
+      },
+      {
+        "refKey": "comment",
+        "hideInGraph": true,
+        "value": "说明",
+        "freeze": false
+      },
+      {
+        "refKey": "refDict",
+        "hideInGraph": true,
+        "value": "数据字典",
+        "freeze": false
+      },
+      {
+        "refKey": "isStandard",
+        "hideInGraph": false,
+        "value": "标准字段",
+        "freeze": false
+      },
+      {
+        "refKey": "uiHint",
+        "hideInGraph": true,
+        "value": "UI建议",
+        "freeze": false
+      },
+      {
+        "refKey": "extProps",
+        "hideInGraph": true,
+        "value": "拓展属性",
+        "freeze": false
+      },
+      {
+        "refKey": "attr1",
+        "value": "拓展字段1",
+        "hideInGraph": true,
+        "enable": false,
+        "freeze": false
+      },
+      {
+        "refKey": "attr2",
+        "value": "拓展字段2",
+        "hideInGraph": true,
+        "enable": false,
+        "freeze": false
+      },
+      {
+        "refKey": "attr3",
+        "value": "拓展字段3",
+        "hideInGraph": true,
+        "enable": false,
+        "freeze": false
+      },
+      {
+        "refKey": "attr4",
+        "value": "拓展字段4",
+        "hideInGraph": true,
+        "enable": false,
+        "freeze": false
+      },
+      {
+        "refKey": "attr5",
+        "value": "拓展字段5",
+        "hideInGraph": true,
+        "enable": false,
+        "freeze": false
+      },
+      {
+        "refKey": "attr6",
+        "value": "拓展字段6",
+        "hideInGraph": true,
+        "enable": false,
+        "freeze": false
+      },
+      {
+        "refKey": "attr7",
+        "value": "拓展字段7",
+        "hideInGraph": true,
+        "enable": false,
+        "freeze": false
+      },
+      {
+        "refKey": "attr8",
+        "value": "拓展字段8",
+        "hideInGraph": true,
+        "enable": false,
+        "freeze": false
+      },
+      {
+        "refKey": "attr9",
+        "value": "拓展字段9",
+        "hideInGraph": true,
+        "enable": false,
+        "freeze": false
+      }
+    ]
+  },
+  "dictSQLTemplate": {
+    "type": "dbDDL",
+    "applyFor": "dictSQLTemplate",
+    "content": "/* 插入字典总表[{{=it.dict.defKey}}-{{=it.dict.defName}}] */\nINSERT INTO SYS_DICT(KEY_,LABEL,INTRO,REVISION) VALUES('{{=it.dict.defKey}}','{{=it.dict.defName}}','{{=it.dict.intro}}',1);\n/* 插入字典明细表 */\n{{~it.dict.items:item:index}}\nINSERT INTO SYS_DICT_ITEM(DICT_KEY,KEY_,LABEL,SORT_,INTRO,REVISION) VALUES('{{=it.dict.defKey}}','{{=item.defKey}}','{{=item.defName}}','{{=item.sort}}','{{=item.intro}}',1);\n{{~}}"
+  }
+}
