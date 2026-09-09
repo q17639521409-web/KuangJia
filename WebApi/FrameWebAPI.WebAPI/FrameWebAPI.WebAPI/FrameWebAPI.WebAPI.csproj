@@ -5,6 +5,9 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <IsPackable>true</IsPackable>   <!-- 关键：启用打包 -->
+    <Version>1.0.0</Version>         <!-- 建议同时指定版本号 -->
+    <PackageId>FrameWebAPI.WebAPI</PackageId>  <!-- 可选：指定包名 -->
   </PropertyGroup>
 
   <ItemGroup>
