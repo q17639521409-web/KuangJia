@@ -22,7 +22,16 @@ jobs:
 
       - name: Pack
         run: dotnet pack WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI.csproj -c Release --no-build
-
+      
+      - name: List all nupkg files
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Finding all .nupkg files:"
+          find . -name "*.nupkg" -type f
+          echo "Checking bin/Release directory:"
+          ls -la WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI/bin/Release/ || echo "Directory not found"
+      
       - name: Push to NuGet
         run: |
           dotnet nuget push WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI/bin/Release/*.nupkg \
