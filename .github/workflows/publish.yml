@@ -14,12 +14,21 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-      - name: Pack the project
-        run: |
-          dotnet pack WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI.csproj -c Release -o ./packages
+      - name: Restore
+        run: dotnet restore WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI.sln
 
-      - name: List packages (for debugging)
-        run: ls -la ./packages/
+      - name: Build
+        run: dotnet build WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI.sln -c Release --no-restore
+
+      - name: Show csproj content (debug)
+        run: cat WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI.csproj
+
+      - name: Pack WebAPI
+        run: |
+          dotnet pack WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI.csproj -c Release --no-build -o ./packages -v detailed
+
+      - name: List packages
+        run: ls -la ./packages/ || echo "packages folder not found"
 
       - name: Push to NuGet
         run: |
