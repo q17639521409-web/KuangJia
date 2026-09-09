@@ -14,26 +14,15 @@ jobs:
         with:
           dotnet-version: '8.0.x'
 
-      - name: Restore
-        run: dotnet restore WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI.sln
-
-      - name: Build
-        run: dotnet build WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI.sln -c Release --no-restore
-
-      - name: Pack
-        run: dotnet pack WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI.csproj -c Release --no-build
-      
-      - name: List all nupkg files
+      - name: Pack the project
         run: |
-          echo "Current directory:"
-          pwd
-          echo "Finding all .nupkg files:"
-          find . -name "*.nupkg" -type f
-          echo "Checking bin/Release directory:"
-          ls -la WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI/bin/Release/ || echo "Directory not found"
-      
+          dotnet pack WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI.csproj -c Release -o ./packages
+
+      - name: List packages (for debugging)
+        run: ls -la ./packages/
+
       - name: Push to NuGet
         run: |
-          dotnet nuget push WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI/bin/Release/*.nupkg \
+          dotnet nuget push ./packages/*.nupkg \
             --api-key ${{ secrets.NUGET_API_KEY }} \
             --source https://api.nuget.org/v3/index.json
