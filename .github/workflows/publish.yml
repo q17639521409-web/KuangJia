@@ -21,15 +21,10 @@ jobs:
         run: dotnet build WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI.sln -c Release --no-restore
 
       - name: Pack
-        run: |
-          mkdir -p ./artifacts
-          dotnet pack WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI.csproj -c Release --no-build -o ./artifacts
-
-      - name: List artifacts (debug)
-        run: ls -la ./artifacts
+        run: dotnet pack WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI.csproj -c Release --no-build
 
       - name: Push to NuGet
         run: |
-          dotnet nuget push ./artifacts/*.nupkg \
+          dotnet nuget push WebApi/FrameWebAPI.WebAPI/FrameWebAPI.WebAPI/bin/Release/*.nupkg \
             --api-key ${{ secrets.NUGET_API_KEY }} \
             --source https://api.nuget.org/v3/index.json
